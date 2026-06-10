@@ -1,0 +1,105 @@
+import Image from 'next/image';
+
+import Container from 'components/shared/container';
+import boltIcon from 'icons/home/features/bolt-lightning.svg';
+import chartIcon from 'icons/home/features/chart.svg';
+import clockIcon from 'icons/home/features/clock.svg';
+import connectionsIcon from 'icons/home/features/connections.svg';
+import keyIcon from 'icons/home/features/key.svg';
+import shieldIcon from 'icons/home/features/shield.svg';
+import { cn } from 'utils/cn';
+
+import Heading from '../heading';
+
+const ITEMS = [
+  {
+    icon: shieldIcon,
+    title: 'Lorem et ipsum.',
+    description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.',
+  },
+  {
+    icon: connectionsIcon,
+    title: 'Dolor adipiscing.',
+    description: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed.',
+  },
+  {
+    icon: chartIcon,
+    title: 'Consectetur elit.',
+    description: 'Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam.',
+  },
+  {
+    icon: clockIcon,
+    title: 'Eiusmod tempor.',
+    description: 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae.',
+  },
+  {
+    icon: boltIcon,
+    title: 'Incididunt labore.',
+    description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.',
+  },
+  {
+    icon: keyIcon,
+    title: 'Dolore magna.',
+    description: 'Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus.,
+  },
+];
+
+const BORDER_CLASSNAME = 'absolute -bottom-1 -top-2 w-px bg-gray-new-20 xl:top-0 md:hidden';
+
+const Features = () => (
+  <section
+    className="features relative scroll-mt-[60px] safe-paddings pb-60 xl:pb-40 lg:scroll-mt-0 lg:pb-32 md:pb-24"
+    id="features"
+  >
+    <Container
+      className="relative grid grid-cols-[224px_1fr] items-center gap-x-32 before:block xl:grid-cols-1 xl:px-16 xl:before:hidden lg:px-16! md:px-5!"
+      size="1600"
+    >
+      <div className="min-w-0 border-t border-gray-new-20 pt-9 lg:pt-7">
+        <Heading
+          icon="features"
+          title="<strong>Magna aliqua enim.</strong> Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo."
+        />
+        <div className="relative mt-20 xl:mt-16 lg:mt-14 lg:max-w-[800px] md:mt-16">
+          <ul className="grid grid-cols-3 gap-x-16 gap-y-[72px] xl:gap-y-10 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-11 md:grid-cols-1 md:gap-y-7">
+            {ITEMS.map(({ icon, title, description }, index) => (
+              <li className="flex flex-col gap-y-[18px] lg:gap-y-4 md:gap-y-3" key={index}>
+                <Image
+                  className="pointer-events-none lg:size-5 md:size-4"
+                  src={icon}
+                  width={24}
+                  height={24}
+                  loading="lazy"
+                  alt=""
+                />
+                <p
+                  className={cn(
+                    'max-w-[320px] text-[18px] leading-normal tracking-extra-tight text-pretty text-gray-new-50',
+                    'xl:w-[256px] lg:w-[288px] lg:text-base lg:leading-snug md:w-full md:max-w-full md:text-[15px]'
+                  )}
+                >
+                  <span className="text-white">{title}</span> {description}
+                </p>
+              </li>
+            ))}
+          </ul>
+          <span className={cn(BORDER_CLASSNAME, '-left-8 xl:-left-6 lg:-left-5 md:hidden')} />
+          <span
+            className={cn(
+              BORDER_CLASSNAME,
+              'left-[calc((100%-128px)/3+32px)] xl:left-[calc((100%-128px)/3+38px)] lg:left-[calc(100%/2+12px)] md:hidden'
+            )}
+          />
+          <span
+            className={cn(
+              BORDER_CLASSNAME,
+              'right-[calc((100%-128px)/3+32px)] xl:right-[calc((100%-128px)/3+24px)] lg:hidden'
+            )}
+          />
+        </div>
+      </div>
+    </Container>
+  </section>
+);
+
+export default Features;

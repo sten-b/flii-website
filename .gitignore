@@ -1,0 +1,14 @@
+node_modules/
+.next/
+public/videos/
+public/docs/
+public/guides/
+public/postgresqltutorial/
+public/animations/
+public/emails/
+public/pdf/
+public/use-cases/
+public/faster/
+public/report/
+public/prompts/
+public/inkeep/
