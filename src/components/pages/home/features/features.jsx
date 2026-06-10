@@ -40,7 +40,7 @@ const ITEMS = [
   {
     icon: keyIcon,
     title: 'Dolore magna.',
-    description: 'Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus.,
+    description: 'Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus.',
   },
 ];
 
