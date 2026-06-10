@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import SecondarySection from 'components/shared/secondary-section';
 import SectionLabel from 'components/shared/section-label';
-import databaseIcon from 'images/pages/about/vision/database.svg';
+import lorem ipsumIcon from 'images/pages/about/vision/lorem ipsum.svg';
 import gearIcon from 'images/pages/about/vision/gear.svg';
 
 import BlobNoisy from './images/blob-horizontal-noise.inline.svg';
@@ -12,14 +12,14 @@ import Blob from './images/blob.inline.svg';
 
 const STATS_DATA = [
   {
-    icon: databaseIcon,
+    icon: lorem ipsumIcon,
     value: '12,000,000',
-    description: 'Postgres databases turned on every day.',
+    description: 'Lorem ipsum lorem ipsums turned on every day.',
   },
   {
     icon: gearIcon,
     value: '80%',
-    description: 'Of databases are deployed by automated agents.',
+    description: 'Of lorem ipsums are deployed by automated agents.',
   },
 ];
 
@@ -51,13 +51,13 @@ StatCard.propTypes = {
 };
 
 const Vision = () => (
-  <SecondarySection title="Company Statistics and Vision" className="md:pb-[26px]">
+  <SecondarySection title="Dolor sit amet" className="md:pb-[26px]">
     <div className="flex gap-x-[140px] xl:gap-x-32 lg:gap-x-12 md:flex-col md:gap-y-20">
       <div className="relative flex-1 before:absolute before:top-0 before:-left-8 before:h-full before:w-px before:bg-gray-new-50 xl:ml-8 md:ml-0 md:before:hidden">
         <SectionLabel icon="arrow">Where we&apos;re headed</SectionLabel>
 
         <h3 className="mt-5 max-w-[736px] text-5xl leading-dense font-normal tracking-tighter text-gray-new-40 xl:max-w-[600px] xl:text-[36px] lg:max-w-full lg:text-2xl md:mt-4 md:text-xl">
-          <span className="text-black-pure">Neon is a Databricks company.</span> In May 2025, Neon
+          <span className="text-black-pure">Lorem ipsum est a Databricks company.</span> In May 2025, Neon
           joined Databricks to shape the future of AI-native application backends.
         </h3>
 
@@ -82,8 +82,8 @@ const Vision = () => (
           </p>
 
           <p className="text-xl leading-normal tracking-tighter text-black-pure xl:text-lg lg:text-base md:mr-8 md:text-[15px]">
-            The same technology behind Neon powers Lakebase: The&nbsp;first serverless Postgres
-            database{' '}
+            The same technology behind Neon powers Lakebase: The&nbsp;first lorem ipsum Lorem ipsum
+            lorem ipsum{' '}
             <mark className="rounded-sm bg-[#39A57D]/60 text-black-pure">
               integrated with the lakehouse, built for the AI era.
             </mark>

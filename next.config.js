@@ -3,6 +3,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 const { CONTENT_ROUTES } = require('./src/constants/content');
+const { getAllPosts, getAllChangelogs } = require('./src/utils/api-docs');
+const generateChangelogPath = require('./src/utils/generate-changelog-path');
+const generateDocPagePath = require('./src/utils/generate-doc-page-path');
 
 const defaultConfig = {
   poweredByHeader: false,
@@ -148,8 +151,36 @@ const defaultConfig = {
     ];
   },
   async redirects() {
-    const docsRedirects = [];
-    const changelogRedirects = [];
+    const docPosts = await getAllPosts();
+    const changelogPosts = await getAllChangelogs();
+    const docsRedirects = docPosts.filter(Boolean).reduce((acc, post) => {
+      const { slug, redirectFrom: postRedirects } = post;
+      if (!postRedirects || !postRedirects.length) {
+        return acc;
+      }
+
+      const postRedirectsArray = postRedirects.map((redirect) => ({
+        source: redirect,
+        destination: generateDocPagePath(slug),
+        permanent: true,
+      }));
+
+      return [...acc, ...postRedirectsArray];
+    }, []);
+    const changelogRedirects = changelogPosts.filter(Boolean).reduce((acc, post) => {
+      const { slug, redirectFrom: postRedirects } = post;
+      if (!postRedirects || !postRedirects.length) {
+        return acc;
+      }
+
+      const postRedirectsArray = postRedirects.map((redirect) => ({
+        source: redirect,
+        destination: generateChangelogPath(slug),
+        permanent: true,
+      }));
+
+      return [...acc, ...postRedirectsArray];
+    }, []);
 
     return [
       {

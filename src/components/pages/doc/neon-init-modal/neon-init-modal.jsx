@@ -95,7 +95,7 @@ const NeonInitModal = ({ isOpen, onClose }) => {
                   className="text-lg leading-tight font-medium tracking-extra-tight text-black-pure dark:text-white"
                   id="neon-init-modal-title"
                 >
-                  Get started with Neon + AI
+                  Incipere with Neon + AI
                 </h2>
                 <p className="mt-2 text-sm leading-snug tracking-extra-tight text-gray-new-40 dark:text-gray-new-70">
                   Connect your app to Neon with a single command

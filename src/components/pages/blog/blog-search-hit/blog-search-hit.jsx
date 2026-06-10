@@ -1,9 +1,9 @@
 import { PropTypes } from 'prop-types';
 
-import BlogPostCard from 'components/pages/blog/blog-post-card';
+import LoremPostCard from 'components/pages/blog/blog-post-card';
 
-const BlogSearchHit = ({ post }) => (
-  <BlogPostCard
+const LoremSearchHit = ({ post }) => (
+  <LoremPostCard
     className="col-span-full border-t border-gray-new-15 py-8 first:border-0 first:border-t-0 first:pt-0 last:pb-0"
     key={post.slug}
     imageWidth={336}
@@ -13,8 +13,8 @@ const BlogSearchHit = ({ post }) => (
   />
 );
 
-BlogSearchHit.propTypes = {
+LoremSearchHit.propTypes = {
   post: PropTypes.object.isRequired,
 };
 
-export default BlogSearchHit;
+export default LoremSearchHit;

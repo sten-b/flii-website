@@ -5,18 +5,18 @@ import PropTypes from 'prop-types';
 
 import Link from 'components/shared/link';
 import {
-  buildBlogCategoryPath,
-  buildBlogIndexPath,
+  buildLoremCategoryPath,
+  buildLoremIndexPath,
   DEFAULT_BLOG_ROUTE_CONFIG,
 } from 'constants/blog';
 import { cn } from 'utils/cn';
 
-const BlogNavLink = ({ name, slug, routeConfig = DEFAULT_BLOG_ROUTE_CONFIG }) => {
+const LoremNavLink = ({ name, slug, routeConfig = DEFAULT_BLOG_ROUTE_CONFIG }) => {
   const segments = useSelectedLayoutSegments();
   const isActive = slug === segments[1] || (slug === 'all' && segments[1] === undefined);
 
   const url =
-    slug === 'all' ? buildBlogIndexPath(routeConfig) : buildBlogCategoryPath(routeConfig, slug);
+    slug === 'all' ? buildLoremIndexPath(routeConfig) : buildLoremCategoryPath(routeConfig, slug);
 
   return (
     <Link
@@ -33,7 +33,7 @@ const BlogNavLink = ({ name, slug, routeConfig = DEFAULT_BLOG_ROUTE_CONFIG }) =>
   );
 };
 
-BlogNavLink.propTypes = {
+LoremNavLink.propTypes = {
   name: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
   routeConfig: PropTypes.shape({
@@ -44,4 +44,4 @@ BlogNavLink.propTypes = {
   }),
 };
 
-export default BlogNavLink;
+export default LoremNavLink;

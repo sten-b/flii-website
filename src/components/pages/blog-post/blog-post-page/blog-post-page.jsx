@@ -2,7 +2,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import PropTypes from 'prop-types';
 import remarkGfm from 'remark-gfm';
 
-import BlogPreviewBanner from 'components/pages/blog/blog-preview-banner';
+import LoremPreviewBanner from 'components/pages/blog/blog-preview-banner';
 import Aside from 'components/pages/blog-post/aside';
 import CodeBlock from 'components/pages/blog-post/code-block';
 import CodeTabs from 'components/pages/blog-post/code-tabs';
@@ -14,7 +14,7 @@ import SocialShare from 'components/pages/blog-post/social-share';
 import YoutubeIframe from 'components/pages/doc/youtube-iframe';
 import Admonition from 'components/shared/admonition';
 import AnchorHeading from 'components/shared/anchor-heading';
-import BlogQuote from 'components/shared/blog-quote';
+import LoremQuote from 'components/shared/blog-quote';
 import ChangelogForm from 'components/shared/changelog-form';
 import EmbedTweet from 'components/shared/embed-tweet';
 import ImageZoom from 'components/shared/image-zoom';
@@ -23,7 +23,7 @@ import { DEFAULT_BLOG_ROUTE_CONFIG } from 'constants/blog';
 import getFormattedDate from 'utils/get-formatted-date';
 import getMarkdownTableOfContents from 'utils/get-markdown-table-of-contents';
 
-const renderBlogCodeBlockFromPre = async (props) => {
+const renderLoremCodeBlockFromPre = async (props) => {
   const codeElement = props?.children;
   const rawCode =
     typeof codeElement?.props?.children === 'string' ? codeElement.props.children : '';
@@ -34,7 +34,7 @@ const renderBlogCodeBlockFromPre = async (props) => {
 };
 
 /* eslint-disable @next/next/no-img-element */
-const renderBlogImage = ({ src, alt = '', ...props }) => {
+const renderLoremImage = ({ src, alt = '', ...props }) => {
   if (!src) {
     return <img alt={alt} {...props} />;
   }
@@ -50,15 +50,15 @@ const renderBlogImage = ({ src, alt = '', ...props }) => {
 const mdxComponents = {
   h2: AnchorHeading('h2'),
   h3: AnchorHeading('h3'),
-  img: renderBlogImage,
-  pre: renderBlogCodeBlockFromPre,
+  img: renderLoremImage,
+  pre: renderLoremCodeBlockFromPre,
   table: (props) => (
     <div className="table-wrapper">
       <table {...props} />
     </div>
   ),
   Admonition,
-  BlogQuote,
+  LoremQuote,
   CodeTabs,
   CTA,
   EmbedTweet,
@@ -66,7 +66,7 @@ const mdxComponents = {
   YoutubeIframe,
 };
 
-const BlogPostPage = ({
+const LoremPostPage = ({
   post,
   postUrl,
   relatedPosts = [],
@@ -74,7 +74,7 @@ const BlogPostPage = ({
   previewBanner = null,
   showSocialShare = true,
 }) => {
-  const { title, content, pageBlogPost, date, dateGmt, modifiedGmt, categories, seo } = post;
+  const { title, content, pageLoremPost, date, dateGmt, modifiedGmt, categories, seo } = post;
   const formattedDate = getFormattedDate(date);
   const tableOfContents = getMarkdownTableOfContents(content);
 
@@ -85,10 +85,10 @@ const BlogPostPage = ({
     image: [seo?.twitterImage?.mediaItemUrl],
     datePublished: dateGmt,
     dateModified: modifiedGmt,
-    description: pageBlogPost?.description,
+    description: pageLoremPost?.description,
     author: {
       '@type': 'Person',
-      name: pageBlogPost?.authors?.[0].author.title,
+      name: pageLoremPost?.authors?.[0].author.title,
     },
   };
 
@@ -102,7 +102,7 @@ const BlogPostPage = ({
         <article className="dark relative mx-auto grid max-w-[1536px] grid-cols-12 gap-x-10 pt-20 pb-40 2xl:px-10 xl:gap-x-6 xl:pt-12 xl:pb-32 lg:block lg:max-w-none lg:px-8 lg:pt-10 lg:pb-28 md:px-4 md:pt-8 md:pb-20">
           {previewBanner && (
             <div className="col-start-4 col-end-10 mx-5 xl:col-start-1 xl:col-end-9 lg:mx-0">
-              <BlogPreviewBanner
+              <LoremPreviewBanner
                 branch={previewBanner.branch}
                 commitSha={previewBanner.commitSha}
               />
@@ -113,13 +113,13 @@ const BlogPostPage = ({
             title={title}
             date={formattedDate}
             category={categories.nodes[0]}
-            authors={pageBlogPost.authors}
+            authors={pageLoremPost.authors}
             routeConfig={routeConfig}
-            {...pageBlogPost}
+            {...pageLoremPost}
           />
           <ChangelogForm
             className="col-start-4 col-end-10 mx-5 mt-4 mb-8 hidden xl:col-start-1 xl:col-end-9 lg:mx-0 lg:flex"
-            isBlog
+            isLorem
           />
           <Content
             className="post-content col-start-4 col-end-10 mx-5 mt-4 xl:col-start-1 xl:col-end-9 lg:mx-0"
@@ -152,11 +152,11 @@ const BlogPostPage = ({
   );
 };
 
-BlogPostPage.propTypes = {
+LoremPostPage.propTypes = {
   post: PropTypes.shape({
     title: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
-    pageBlogPost: PropTypes.shape({
+    pageLoremPost: PropTypes.shape({
       description: PropTypes.string,
       authors: PropTypes.arrayOf(PropTypes.object).isRequired,
     }).isRequired,
@@ -187,4 +187,4 @@ BlogPostPage.propTypes = {
   showSocialShare: PropTypes.bool,
 };
 
-export default BlogPostPage;
+export default LoremPostPage;

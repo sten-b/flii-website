@@ -1,3 +1,3 @@
-import GuideCard from './guide-card';
+import LoremCard from './guide-card';
 
-export default GuideCard;
+export default LoremCard;

@@ -49,7 +49,7 @@ const TableHeading = ({ className, label, price, isLabelsColumn, isFeaturedPlan 
         to={LINKS.signup}
         tagName={`Details Table Top > ${label}`}
       >
-        Get started
+        Incipere
       </Button>
     </div>
   );

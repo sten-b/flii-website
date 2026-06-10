@@ -1,3 +1,3 @@
-import BlogHeader from './blog-header';
+import LoremHeader from './blog-header';
 
-export default BlogHeader;
+export default LoremHeader;

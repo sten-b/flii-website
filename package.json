@@ -7,7 +7,7 @@
     "npm": ">=8.6.0"
   },
   "scripts": {
-    "prebuild": "echo \"Skipping prebuild scripts\"",
+    "prebuild": "echo \"Skipping prebuild\"",
     "predev": "node scripts/blog-content-cli.js bootstrap && node src/scripts/update-github-stars.js && node src/scripts/generate-docs-icons-config.js && npm run check:content-data && npm run check:pricing-sync",
     "dev": "next dev",
     "build": "next build",

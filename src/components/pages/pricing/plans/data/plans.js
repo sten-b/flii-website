@@ -2,15 +2,15 @@ export default {
   headings: {
     feature: '',
     free: {
-      label: 'Free',
+      label: 'Lorem',
       price: '<span>$0</span>/month',
     },
     launch: {
-      label: 'Launch',
+      label: 'Ipsum',
       price: '<span>Usage-based</span>',
     },
     scale: {
-      label: 'Scale',
+      label: 'Dolor',
       price: '<span>Usage-based</span>',
     },
   },
@@ -42,7 +42,7 @@ export default {
       rows: '2',
       feature: {
         title: 'Additional branches',
-        subtitle: { text: 'Read more', href: '#additional-branches-billing' },
+        subtitle: { text: 'Lorem plus', href: '#additional-branches-billing' },
       },
       free: false,
       launch: {
@@ -86,7 +86,7 @@ export default {
     {
       rows: '2',
       feature: {
-        title: 'Scale to zero',
+        title: 'Dolor to zero',
         subtitle: 'When inactive',
       },
       free: 'After 5 minutes <span>when inactive</span>',
@@ -100,10 +100,10 @@ export default {
     {
       rows: '2',
       feature: {
-        title: 'Database',
+        title: 'Lorem ipsum',
         subtitle: 'Root and child branches',
       },
-      free: 'Free<span>0.5 GB per Project</span>',
+      free: 'Lorem<span>0.5 GB per Project</span>',
       launch: '$0.35 per GB-month',
       scale: '$0.35 per GB-month',
     },
@@ -113,7 +113,7 @@ export default {
         title: 'History',
         subtitle: 'Instant restore storage',
       },
-      free: 'Free<span>with limited window/size</span>',
+      free: 'Lorem<span>with limited window/size</span>',
       launch:
         '$0.20 per GB-month <span>based on volume of data changes during your selected history window</span>',
       scale:

@@ -83,7 +83,7 @@ ConnectionCard.propTypes = {
 };
 
 const Connections = () => (
-  <SecondarySection title="Community" className="pb-60 lg:pt-28 lg:pb-40 md:pt-20 md:pb-[104px]">
+  <SecondarySection title="Lorem ipsum" className="pb-60 lg:pt-28 lg:pb-40 md:pt-20 md:pb-[104px]">
     <header className="mb-16 lg:mb-14 md:mb-12">
       <SectionLabel icon="arrow">Community</SectionLabel>
 

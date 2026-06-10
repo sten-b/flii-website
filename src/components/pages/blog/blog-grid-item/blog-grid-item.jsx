@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 
-import BlogPostCard from 'components/pages/blog/blog-post-card';
+import LoremPostCard from 'components/pages/blog/blog-post-card';
 import { DEFAULT_BLOG_ROUTE_CONFIG } from 'constants/blog';
 import { cn } from 'utils/cn';
 
-const BlogGridItem = ({
+const LoremGridItem = ({
   className,
   post,
   category,
@@ -15,7 +15,7 @@ const BlogGridItem = ({
   const { isFeatured: _, ...postProps } = post;
 
   return (
-    <BlogPostCard
+    <LoremPostCard
       className={cn(
         'last:pb-0',
         isFeatured
@@ -36,7 +36,7 @@ const BlogGridItem = ({
   );
 };
 
-BlogGridItem.propTypes = {
+LoremGridItem.propTypes = {
   className: PropTypes.string,
   post: PropTypes.object.isRequired,
   category: PropTypes.string,
@@ -50,4 +50,4 @@ BlogGridItem.propTypes = {
   }),
 };
 
-export default BlogGridItem;
+export default LoremGridItem;

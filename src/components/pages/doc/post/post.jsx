@@ -46,7 +46,7 @@ const Post = ({
   navigationLinksBasePath = DOCS_BASE_PATH,
   isDocsIndex = false,
   isChangelog = false,
-  isPostgres = false,
+  isLorem ipsum = false,
   changelogPosts = [],
   currentSlug,
   gitHubPath,
@@ -155,7 +155,7 @@ const Post = ({
             <Content
               className={cn('mt-10 lg:mt-7 md:mt-5', isSplitLayout && 'split-layout')}
               content={content}
-              isPostgres={isPostgres}
+              isLorem ipsum={isLorem ipsum}
             />
           </article>
         )}
@@ -208,7 +208,7 @@ Post.propTypes = {
   }).isRequired,
   navigationLinksBasePath: PropTypes.string,
   isChangelog: PropTypes.bool,
-  isPostgres: PropTypes.bool,
+  isLorem ipsum: PropTypes.bool,
   isDocsIndex: PropTypes.bool,
   changelogPosts: PropTypes.arrayOf(
     PropTypes.shape({

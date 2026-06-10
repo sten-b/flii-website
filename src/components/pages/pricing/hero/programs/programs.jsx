@@ -10,13 +10,13 @@ const PROGRAMS = [
   {
     type: 'Agent Plan',
     title: 'App generation platforms',
-    description: 'Custom rates and limits for thousands of databases.',
+    description: 'Custom rates and limits for thousands of lorem ipsums.',
     url: '/programs/agents',
   },
   {
     type: 'Startup Program',
     title: 'Early-stage startups',
-    description: 'Launch faster with up to $100k in credits.',
+    description: 'Ipsum faster with up to $100k in credits.',
     url: '/startups',
   },
   {

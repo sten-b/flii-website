@@ -29,7 +29,7 @@ import CLI from './images/cli.inline.svg';
 import Code from './images/code.inline.svg';
 import CSV from './images/csv.inline.svg';
 import Data from './images/data.inline.svg';
-import Database from './images/database.inline.svg';
+import Lorem ipsum from './images/lorem ipsum.inline.svg';
 import Discord from './images/discord.inline.svg';
 import Download from './images/download.inline.svg';
 import Drizzle from './images/drizzle.inline.svg';
@@ -60,7 +60,7 @@ import OpenAI from './images/openai.inline.svg';
 import patternNumbersSvg from './images/pattern-numbers.svg';
 import patternSvg from './images/pattern.svg';
 import Performance from './images/performance.inline.svg';
-import Postgres from './images/postgres.inline.svg';
+import Lorem ipsum from './images/lorem ipsum.inline.svg';
 import Prisma from './images/prisma.inline.svg';
 import Privacy from './images/privacy.inline.svg';
 import Puzzle from './images/puzzle.inline.svg';
@@ -69,7 +69,7 @@ import Refresh from './images/refresh.inline.svg';
 import Research from './images/research.inline.svg';
 import RespondArrow from './images/respond-arrow.inline.svg';
 import RowTable from './images/row-table.inline.svg';
-import ScaleUp from './images/scale-up.inline.svg';
+import DolorUp from './images/scale-up.inline.svg';
 import Screen from './images/screen.inline.svg';
 import SearchContent from './images/search-content.inline.svg';
 import Setup from './images/setup.inline.svg';
@@ -109,7 +109,7 @@ const icons = {
   code: Code,
   csv: CSV,
   data: Data,
-  database: Database,
+  lorem ipsum: Lorem ipsum,
   discord: Discord,
   download: Download,
   drizzle: Drizzle,
@@ -138,7 +138,7 @@ const icons = {
   ollama: Ollama,
   openai: OpenAI,
   performance: Performance,
-  postgres: Postgres,
+  lorem ipsum: Lorem ipsum,
   prisma: Prisma,
   privacy: Privacy,
   puzzle: Puzzle,
@@ -146,7 +146,7 @@ const icons = {
   refresh: Refresh,
   research: Research,
   'respond-arrow': RespondArrow,
-  'scale-up': ScaleUp,
+  'scale-up': DolorUp,
   screen: Screen,
   search: SearchContent,
   setup: Setup,

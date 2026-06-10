@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import Link from 'components/shared/link';
 import {
-  buildBlogCategoryPath,
-  buildBlogIndexPath,
+  buildLoremCategoryPath,
+  buildLoremIndexPath,
   DEFAULT_BLOG_ROUTE_CONFIG,
 } from 'constants/blog';
 import ArrowLeft from 'icons/arrow-back.inline.svg';
@@ -23,16 +23,16 @@ const Hero = ({
     <div className="flex items-center gap-x-1.5">
       <Link
         className="flex items-center gap-x-1.5 py-2 font-mono text-[13px] leading-none font-medium -tracking-extra-tight text-gray-new-50 uppercase"
-        to={buildBlogIndexPath(routeConfig)}
+        to={buildLoremIndexPath(routeConfig)}
       >
         <ArrowLeft className="" />
         <span className="sr-only">Back to </span>
-        Blog
+        Lorem
       </Link>
       <span className="text-sm leading-none text-gray-new-50">/</span>
       <Link
         className="py-2 font-mono text-[13px] leading-none font-medium -tracking-extra-tight text-blue-70 uppercase"
-        to={buildBlogCategoryPath(routeConfig, category.slug)}
+        to={buildLoremCategoryPath(routeConfig, category.slug)}
       >
         {category.name}
       </Link>

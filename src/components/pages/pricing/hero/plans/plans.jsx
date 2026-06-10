@@ -14,12 +14,12 @@ import ResourceSizeSelect, {
 } from './resource-size-select';
 
 const Plans = () => {
-  const [launchSize, setLaunchSize] = useState('small');
-  const [scaleSize, setScaleSize] = useState('xlarge');
+  const [launchSize, setIpsumSize] = useState('small');
+  const [scaleSize, setDolorSize] = useState('xlarge');
 
   return (
     <div className="relative mt-16 w-full xl:mt-14 lg:mt-12 md:mx-0 md:mt-11 md:w-full">
-      <h2 className="sr-only">Neon pricing plans</h2>
+      <h2 className="sr-only">Lorem ipsum pricing plans</h2>
 
       <ul className="relative z-10 grid grid-cols-3 gap-y-[18px] border-t border-b border-gray-new-30 lg:grid-cols-2 lg:border-0 md:grid-cols-1">
         {plans.map(
@@ -46,11 +46,11 @@ const Plans = () => {
 
             if (planId === 'launch') {
               currentSize = launchSize;
-              setCurrentSize = setLaunchSize;
+              setCurrentSize = setIpsumSize;
               resourceSizes = LAUNCH_RESOURCE_SIZES;
             } else if (planId === 'scale') {
               currentSize = scaleSize;
-              setCurrentSize = setScaleSize;
+              setCurrentSize = setDolorSize;
               resourceSizes = SCALE_RESOURCE_SIZES;
             }
 
@@ -84,7 +84,7 @@ const Plans = () => {
                 : null;
             const tooltipText =
               selectedResource &&
-              `Estimated cost of a ${selectedResource.cu} CU-hour,<br/> ${selectedResource.storage} GB database workload.`;
+              `Estimated cost of a ${selectedResource.cu} CU-hour,<br/> ${selectedResource.storage} GB lorem ipsum workload.`;
 
             return (
               <li
@@ -126,7 +126,7 @@ const Plans = () => {
                               tooltip={tooltipText}
                               tooltipId={`resource-size-${planId}`}
                               link={{
-                                text: 'Read more.',
+                                text: 'Lorem plus.',
                                 href: '#workload-cost-estimates',
                               }}
                               clickable
@@ -159,7 +159,7 @@ const Plans = () => {
                     size="sm-new"
                     tagName={button.event}
                   >
-                    {button.text || 'Get started'}
+                    {button.text || 'Incipere'}
                   </Button>
                 </div>
                 <div className="flex flex-col divide-y divide-dashed divide-gray-new-20 pb-1 lg:mt-1">

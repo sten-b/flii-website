@@ -113,7 +113,7 @@ const ContactForm = () => {
     setFormState(FORM_STATES.LOADING);
 
     try {
-      const eventName = 'Contact Sales Form Submitted';
+      const eventName = 'Lorem ipsum Form Submitted';
       const eventProps = {
         email,
         first_name: firstname,
@@ -157,7 +157,7 @@ const ContactForm = () => {
         className="gap-y-2"
         errorTheme="tooltip"
         name="firstname"
-        label="First Name*"
+        label="Consectetur adipiscing"
         autoComplete="given-name"
         placeholder="Marques"
         theme="transparent"
@@ -171,7 +171,7 @@ const ContactForm = () => {
         className="gap-y-2"
         errorTheme="tooltip"
         name="lastname"
-        label="Last Name*"
+        label="Sed do eiusmod"
         autoComplete="family-name"
         placeholder="Hansen"
         theme="transparent"
@@ -185,7 +185,7 @@ const ContactForm = () => {
         className="gap-y-2"
         errorTheme="tooltip"
         name="email"
-        label="Work Email*"
+        label="Tempor incididunt"
         type="email"
         autoComplete="email"
         placeholder="info@acme.com"
@@ -200,7 +200,7 @@ const ContactForm = () => {
         className="gap-y-2"
         errorTheme="tooltip"
         name="companyWebsite"
-        label="Company Website"
+        label="Ut labore dolore"
         placeholder="acme.com"
         theme="transparent"
         labelClassName={labelClassName}
@@ -212,7 +212,7 @@ const ContactForm = () => {
         className="gap-y-2"
         errorTheme="tooltip"
         name="reasonForContact"
-        label="Reason for Contact*"
+        label="Magna aliqua enim"
         tag="select"
         theme="transparent"
         labelClassName={labelClassName}
@@ -223,14 +223,14 @@ const ContactForm = () => {
       >
         <option value="hidden" disabled hidden />
         <option value="Demo/POC">Demo/POC</option>
-        <option value="Enterprise Pricing">Enterprise Pricing</option>
+        <option value="Consectetur Pricing">Consectetur Pricing</option>
         <option value="HIPAA">HIPAA</option>
       </Field>
       <Field
         className="gap-y-2"
         errorTheme="tooltip"
         name="companySize"
-        label="Company Size"
+        label="Quis nostrud exercitation"
         tag="select"
         theme="transparent"
         labelClassName={labelClassName}
@@ -251,7 +251,7 @@ const ContactForm = () => {
         className="relative z-10 col-span-full gap-y-2"
         errorTheme="tooltip"
         name="message"
-        label="Message*"
+        label="Lorem ipsum"
         tag="textarea"
         theme="transparent"
         labelClassName={labelClassName}

@@ -1,3 +1,3 @@
-import BlogNavLink from './blog-nav-link';
+import LoremNavLink from './blog-nav-link';
 
-export default BlogNavLink;
+export default LoremNavLink;

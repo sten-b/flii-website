@@ -5,15 +5,15 @@ import PropTypes from 'prop-types';
 import Link from 'components/shared/link/link';
 import {
   EXTRA_CATEGORIES,
-  buildBlogCategoryPath,
-  buildBlogPostPath,
+  buildLoremCategoryPath,
+  buildLoremPostPath,
   DEFAULT_BLOG_ROUTE_CONFIG,
 } from 'constants/blog';
 import { cn } from 'utils/cn';
 import getExcerpt from 'utils/get-excerpt';
 import getFormattedDate from 'utils/get-formatted-date';
 
-const BlogPostCard = ({
+const LoremPostCard = ({
   className,
   title,
   subtitle,
@@ -22,7 +22,7 @@ const BlogPostCard = ({
   date,
   category,
   categories,
-  pageBlogPost,
+  pageLoremPost,
   isFeatured = false,
   isSmart = false,
   fullSize = false,
@@ -32,7 +32,7 @@ const BlogPostCard = ({
   isPriority = false,
   routeConfig = DEFAULT_BLOG_ROUTE_CONFIG,
 }) => {
-  const { largeCover } = pageBlogPost || {};
+  const { largeCover } = pageLoremPost || {};
 
   const excerpt = subtitle || (content && getExcerpt(he.decode(content), 280));
 
@@ -42,13 +42,13 @@ const BlogPostCard = ({
 
   const link = (() => {
     if (extraCategory) return `${extraCategory.basePath}${slug}`;
-    return buildBlogPostPath(routeConfig, slug);
+    return buildLoremPostPath(routeConfig, slug);
   })();
 
   const cat = (() => {
     if (extraCategory) {
       return {
-        slug: buildBlogCategoryPath(routeConfig, extraCategory.slug),
+        slug: buildLoremCategoryPath(routeConfig, extraCategory.slug),
         name: extraCategory.name,
       };
     }
@@ -56,7 +56,7 @@ const BlogPostCard = ({
     const wpCategory = category || categories?.nodes[0];
 
     return {
-      slug: buildBlogCategoryPath(routeConfig, wpCategory?.slug),
+      slug: buildLoremCategoryPath(routeConfig, wpCategory?.slug),
       name: wpCategory?.name,
     };
   })();
@@ -164,7 +164,7 @@ const BlogPostCard = ({
   );
 };
 
-BlogPostCard.propTypes = {
+LoremPostCard.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
@@ -180,7 +180,7 @@ BlogPostCard.propTypes = {
       })
     ),
   }).isRequired,
-  pageBlogPost: PropTypes.shape({
+  pageLoremPost: PropTypes.shape({
     largeCover: PropTypes.shape({
       mediaItemUrl: PropTypes.string,
       altText: PropTypes.string,
@@ -213,4 +213,4 @@ BlogPostCard.propTypes = {
   }),
 };
 
-export default BlogPostCard;
+export default LoremPostCard;

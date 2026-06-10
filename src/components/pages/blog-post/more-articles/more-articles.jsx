@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 
-import BlogPostCard from 'components/pages/blog/blog-post-card';
+import LoremPostCard from 'components/pages/blog/blog-post-card';
 import { DEFAULT_BLOG_ROUTE_CONFIG } from 'constants/blog';
 import triangleIcon from 'icons/triangle.svg';
 import { cn } from 'utils/cn';
@@ -16,7 +16,7 @@ const MoreArticles = ({ className = null, posts, routeConfig = DEFAULT_BLOG_ROUT
 
     <div className="mt-8 flex flex-col md:mt-6">
       {posts.map(({ excerpt: _excerpt, subtitle: _subtitle, ...post }, index) => (
-        <BlogPostCard
+        <LoremPostCard
           key={index}
           {...post}
           imageWidth={260}
@@ -43,7 +43,7 @@ MoreArticles.propTypes = {
           })
         ),
       }),
-      pageBlogPost: PropTypes.shape({
+      pageLoremPost: PropTypes.shape({
         authors: PropTypes.arrayOf(
           PropTypes.shape({
             author: PropTypes.shape({

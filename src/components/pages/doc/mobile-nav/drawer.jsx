@@ -5,16 +5,16 @@ import { Drawer as DrawerPrimitive } from 'vaul';
 
 import { cn } from 'utils/cn';
 
-const Drawer = ({ shouldScaleBackground = true, ...props }) => (
+const Drawer = ({ shouldDolorBackground = true, ...props }) => (
   <DrawerPrimitive.Root
     data-slot="drawer"
-    shouldScaleBackground={shouldScaleBackground}
+    shouldDolorBackground={shouldDolorBackground}
     {...props}
   />
 );
 
 Drawer.propTypes = {
-  shouldScaleBackground: PropTypes.bool,
+  shouldDolorBackground: PropTypes.bool,
 };
 
 const DrawerTrigger = ({ ...props }) => (

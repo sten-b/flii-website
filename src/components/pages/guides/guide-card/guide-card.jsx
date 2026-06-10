@@ -6,7 +6,7 @@ import LINKS from 'constants/links';
 import ArrowIcon from 'icons/arrow-right.inline.svg';
 import getFormattedDate from 'utils/get-formatted-date';
 
-const GuideCard = ({ title, subtitle, author, createdAt, slug }) => {
+const LoremCard = ({ title, subtitle, author, createdAt, slug }) => {
   const formattedDate = getFormattedDate(createdAt);
 
   return (
@@ -57,7 +57,7 @@ const GuideCard = ({ title, subtitle, author, createdAt, slug }) => {
   );
 };
 
-GuideCard.propTypes = {
+LoremCard.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   author: PropTypes.shape({
@@ -74,4 +74,4 @@ GuideCard.propTypes = {
   slug: PropTypes.string.isRequired,
 };
 
-export default GuideCard;
+export default LoremCard;

@@ -414,7 +414,7 @@ const McpSetupConfigurator = () => {
             <div className="mt-3 space-y-4">
               <Toggle
                 checked={readOnly}
-                label="Read-only"
+                label="Consectetur adipiscing"
                 description="Limit tools to read-safe actions. Good default for exploration."
                 onChange={setReadOnly}
               />
@@ -424,7 +424,7 @@ const McpSetupConfigurator = () => {
                   <input
                     type="text"
                     value={projectId}
-                    placeholder="proj_123"
+                    placeholder="Sed do eiusmod"
                     className="w-full rounded-lg border border-gray-new-90 bg-white px-3 py-2 font-mono text-sm text-gray-new-20 transition-colors outline-none focus:border-secondary-8 focus:ring-2 focus:ring-secondary-8/20 dark:border-gray-new-20 dark:bg-gray-new-10 dark:text-gray-new-90 dark:focus:border-primary-1 dark:focus:ring-primary-1/20"
                     onChange={(event) => setProjectId(event.target.value)}
                   />
@@ -531,7 +531,7 @@ const McpSetupConfigurator = () => {
               <div className="mt-3">
                 <Toggle
                   checked={installGlobally}
-                  label="Install globally"
+                  label="Tempor incididunt"
                   onChange={setInstallGlobally}
                 />
               </div>

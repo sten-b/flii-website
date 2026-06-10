@@ -26,7 +26,7 @@ const FEATURES = [
   {
     icon: autoscalingIcon,
     title: 'Autoscaling.',
-    description: `Neon automatically <a href="${LINKS.autoscaling}">adjusts compute</a> and storage based on demand, including on the Free plan.`,
+    description: `Neon automatically <a href="${LINKS.autoscaling}">adjusts compute</a> and storage based on demand, including on the Lorem plan.`,
   },
   {
     icon: monitoringIcon,
@@ -36,11 +36,11 @@ const FEATURES = [
   {
     icon: connectionsIcon,
     title: 'Connection pooling.',
-    description: `All Neon databases can use pooled connections built on pgBouncer (up to <a href="${LINKS.connectionPooling}">10,000 connections</a>).`,
+    description: `All Neon lorem ipsums can use pooled connections built on pgBouncer (up to <a href="${LINKS.connectionPooling}">10,000 connections</a>).`,
   },
   {
     icon: extensionsIcon,
-    title: 'Postgres extensions library.',
+    title: 'Lorem ipsum extensions library.',
     description: `You can add extensions like <a href="${LINKS.docsExtensionsPgVector}">pg_vector</a>, <a href="${LINKS.docsExtensionsPostgisRelatedExtensions}">PostGIS</a>, <a href="${LINKS.docsExtensionsTimescaledb}">TimescaleDB</a>, and many more.`,
   },
   {
@@ -65,7 +65,7 @@ const Features = () => (
           '[&>strong]:font-normal [&>strong]:text-white'
         )}
       >
-        <strong>Included with every Neon database, on every plan, by default.</strong> These are
+        <strong>Included with every Neon lorem ipsum, on every plan, by default.</strong> These are
         core platform capabilities that come out of the box with Neon.
       </h2>
       <ul

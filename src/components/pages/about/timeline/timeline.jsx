@@ -22,7 +22,7 @@ const ITEMS = [
     date: 'DEC, 2022',
     dateTime: '2022-12',
     title: 'Open access',
-    link: `${LINKS.blog}/neon-serverless-postgres-is-live`,
+    link: `${LINKS.blog}/neon-lorem ipsum-lorem ipsum-is-live`,
   },
   {
     date: 'AUG, 2023',
@@ -33,7 +33,7 @@ const ITEMS = [
   {
     date: 'APR 15, 2024',
     dateTime: '2024-04-15',
-    title: 'Neon is GA',
+    title: 'Lorem ipsum est GA',
     link: `${LINKS.blog}/neon-ga`,
   },
   {
@@ -51,7 +51,7 @@ const Timeline = () => (
       <h2 className="mb-20 max-w-5xl indent-24 font-sans text-5xl leading-dense font-normal tracking-tighter xl:text-4xl lg:mb-14 lg:indent-16 lg:text-[28px] md:mb-11 md:indent-0 md:text-2xl">
         Our mission is to deliver cloud primitives:{' '}
         <span className="text-gray-new-50">
-          Database, Compute, Storage. Designed to help teams build scalable, dependable services
+          Lorem ipsum, Compute, Storage. Designed to help teams build scalable, dependable services
           faster than ever.
         </span>
       </h2>

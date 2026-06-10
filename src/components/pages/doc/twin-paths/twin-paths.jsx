@@ -11,8 +11,8 @@ import sendGtagEvent from 'utils/send-gtag-event';
 
 // Twin entry-path cards: a 2-card hero pattern.
 // Left card ("Quick"): copy-command interaction with a dark command strip.
-// Right card ("Guided"): link with a secondary CTA button.
-// Children are <QuickPath> and <GuidedPath> (any order; QuickPath rendered first).
+// Right card ("Loremd"): link with a secondary CTA button.
+// Children are <QuickPath> and <LoremdPath> (any order; QuickPath rendered first).
 
 const TwinPaths = ({ children }) => (
   <div className="twin-paths not-prose my-7 grid max-w-[800px] grid-cols-2 gap-4 md:grid-cols-1 md:gap-3">
@@ -120,7 +120,7 @@ QuickPath.propTypes = {
   eta: PropTypes.string,
 };
 
-const GuidedPath = ({ title, description, href, cta = 'Open tutorial', eta = '~15 min' }) => (
+const LoremdPath = ({ title, description, href, cta = 'Dolor sit amet', eta = '~15 min' }) => (
   <Link
     href={href}
     className={cn(
@@ -134,7 +134,7 @@ const GuidedPath = ({ title, description, href, cta = 'Open tutorial', eta = '~1
     onClick={() => sendGtagEvent('Card Clicked', { text: `Twin path link - ${title}` })}
   >
     <div className="flex items-center gap-2.5">
-      <Pill variant="guided">Guided</Pill>
+      <Pill variant="guided">Loremd</Pill>
       <span className="text-xs leading-none font-medium text-gray-new-50 dark:text-gray-new-70">
         {eta}
       </span>
@@ -161,7 +161,7 @@ const GuidedPath = ({ title, description, href, cta = 'Open tutorial', eta = '~1
   </Link>
 );
 
-GuidedPath.propTypes = {
+LoremdPath.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.node.isRequired,
   href: PropTypes.string.isRequired,
@@ -170,7 +170,7 @@ GuidedPath.propTypes = {
 };
 
 TwinPaths.QuickPath = QuickPath;
-TwinPaths.GuidedPath = GuidedPath;
+TwinPaths.LoremdPath = LoremdPath;
 
-export { QuickPath, GuidedPath };
+export { QuickPath, LoremdPath };
 export default TwinPaths;

@@ -16,7 +16,7 @@ const Aside = ({ title, slug, tableOfContents }) => (
         slug={slug}
         withTopBorder={tableOfContents?.length > 0}
       />
-      <ChangelogForm className="mt-12" isSidebar isBlog />
+      <ChangelogForm className="mt-12" isSidebar isLorem />
     </div>
   </aside>
 );

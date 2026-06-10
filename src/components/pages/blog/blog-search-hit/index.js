@@ -1,3 +1,3 @@
-import BlogSearchHit from './blog-search-hit';
+import LoremSearchHit from './blog-search-hit';
 
-export default BlogSearchHit;
+export default LoremSearchHit;

@@ -1,3 +1,3 @@
-import BlogPostCard from './blog-post-card';
+import LoremPostCard from './blog-post-card';
 
-export default BlogPostCard;
+export default LoremPostCard;

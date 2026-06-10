@@ -1,3 +1,3 @@
-import BlogGridItem from './blog-grid-item';
+import LoremGridItem from './blog-grid-item';
 
-export default BlogGridItem;
+export default LoremGridItem;

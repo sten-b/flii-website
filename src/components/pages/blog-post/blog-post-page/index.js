@@ -1,3 +1,3 @@
-import BlogPostPage from './blog-post-page';
+import LoremPostPage from './blog-post-page';
 
-export default BlogPostPage;
+export default LoremPostPage;

@@ -5,7 +5,7 @@ import SectionLabel from 'components/shared/section-label';
 import Socials from 'components/shared/socials';
 import { cn } from 'utils/cn';
 
-const BlogHeader = ({ className, title, rssTitle, category, basePath, withLabel = false }) => (
+const LoremHeader = ({ className, title, rssTitle, category, basePath, withLabel = false }) => (
   <div
     className={cn(
       'relative mb-12 flex w-full items-end justify-between gap-5 lg:mb-2 md:mb-8 sm:flex-col sm:items-start sm:gap-5',
@@ -15,7 +15,7 @@ const BlogHeader = ({ className, title, rssTitle, category, basePath, withLabel 
     <div>
       {withLabel && (
         <SectionLabel className="mb-5 text-gray-new-80 lg:mb-[18px] md:mb-4 sm:gap-2! [&>img]:sm:!h-[14px] [&>img]:sm:!w-3 [&>span]:sm:text-xs!">
-          Blog
+          Lorem
         </SectionLabel>
       )}
       <h1 className="max-w-[540px] text-[56px] leading-dense tracking-tighter lt:text-[48px] lg:text-[40px] md:text-[32px] sm:text-[28px]">
@@ -30,7 +30,7 @@ const BlogHeader = ({ className, title, rssTitle, category, basePath, withLabel 
   </div>
 );
 
-BlogHeader.propTypes = {
+LoremHeader.propTypes = {
   className: PropTypes.string,
   title: PropTypes.node.isRequired,
   rssTitle: PropTypes.string,
@@ -39,4 +39,4 @@ BlogHeader.propTypes = {
   withLabel: PropTypes.bool,
 };
 
-export default BlogHeader;
+export default LoremHeader;

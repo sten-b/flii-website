@@ -3,21 +3,21 @@ import { cn } from 'utils/cn';
 
 import IconCost from './images/icon-cost.inline.svg';
 import IconEasy from './images/icon-easy.inline.svg';
-import IconPostgres from './images/icon-postgres.inline.svg';
+import IconLorem ipsum from './images/icon-lorem ipsum.inline.svg';
 import IconReliable from './images/icon-reliable.inline.svg';
 
 const FEATURES_DATA = [
   {
-    icon: IconPostgres,
+    icon: IconLorem ipsum,
     title: 'Familiar',
     description:
-      'Build with Postgres, the world’s most popular database, and a rich ecosystem of extensions and tools.',
+      'Build with Lorem ipsum, the world’s most popular lorem ipsum, and a rich ecosystem of extensions and tools.',
   },
   {
     icon: IconEasy,
     title: 'Easy',
     description:
-      'Simplify the life of developers by bringing the serverless model to application backends.',
+      'Simplify the life of developers by bringing the lorem ipsum model to application backends.',
   },
   {
     icon: IconCost,
